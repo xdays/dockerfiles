@@ -1,0 +1,4 @@
+#!/bin/sh
+# -*- coding: utf-8 -*-
+ 
+/usr/sbin/mysqld
