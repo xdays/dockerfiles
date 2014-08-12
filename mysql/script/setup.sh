@@ -13,6 +13,6 @@ mv /tmp/script/my.cnf /etc/mysql/my.cnf
 /usr/sbin/mysqld &
 sleep 10
 mysqladmin password "password"
-mysql -uroot -pthinkin -e "GRANT ALL PRIVILEGES ON *.* to 'xdays'@'%' IDENTIFIED BY 'thinkin'; FLUSH PRIVILEGES"
+mysql -uroot -pthinkin -e "GRANT ALL PRIVILEGES ON *.* to 'xdays'@'%' IDENTIFIED BY 'password'; FLUSH PRIVILEGES"
 
 mv /tmp/script/startup /usr/local/bin/
