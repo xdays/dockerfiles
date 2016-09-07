@@ -1,4 +1,0 @@
-#!/bin/sh
-# -*- coding: utf-8 -*-
- 
-/usr/bin/redis-server 
