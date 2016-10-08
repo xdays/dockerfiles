@@ -1,0 +1,22 @@
+# xiangjunz, people, example.com
+dn: uid=xiangjunz,ou=people,dc=example,dc=com
+objectClass: ldapPublicKey
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+sshPublicKey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCVjlC5M1BUZc21I5wTixVZII1z
+ Cbj4UzO8gACiOrUcBdgYbfR8SKVarOBYXovIp2BdtxfLi4uKb9/5jquy/2a0f4vZmbF657tXmMFhu
+ M8/LtaKdo2/uq+O6LRDlOgeTkDAaxuSTcWYSS00N5OzvnqkircoqEtHJ/BWDhPPFDjNeS7Voaj8zG
+ /LL/SfFJ/m9Zgta30hejLeN0ZSor+mp33450FJZ+FNIRqg18tNNVLIvEGVdwuKnb0x1P15il1eeEk
+ flvDzmwm7SzdB/gqaKhHdlQw5Sa0E9R9iqYAM+mi8jeRM6cjxnI+EyfwxSIbjXE000P9LpA0UHS/o
+ twkAagUf xiangjunz@example.com
+homeDirectory: /home/xiangjunz
+loginShell: /bin/bash
+uid: xiangjunz
+cn: Zhang Xiangjun
+uidNumber: 10000
+sn: Xiangjun
+givenName: Zhang
+userPassword:: e1NTSEF9RFNnTmFaVnpHZlJPc01ZUmVvLzk4d1lxbEZWYmlncUE=
+gidNumber: 10000

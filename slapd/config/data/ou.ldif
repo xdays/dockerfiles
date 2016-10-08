@@ -1,0 +1,19 @@
+dn: dc=example,dc=com
+objectClass: organization
+objectClass: dcObject
+dc: example
+o: example
+
+dn: ou=people,dc=example,dc=com
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=groups,dc=example,dc=com
+objectClass: organizationalUnit
+ou: Groups
+
+# ops, group, example.com
+dn: cn=ops,ou=groups,dc=example,dc=com
+objectClass: posixGroup
+gidNumber: 10000
+cn: ops
