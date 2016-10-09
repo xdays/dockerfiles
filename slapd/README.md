@@ -14,6 +14,11 @@ image for openldap
 
 ## config
 
+### prepare cert file
+
+    mkdir certs
+    cp example.com.crt example.com.key certs
+
 ## copy ldif file
 
     docker cp . slapd:/etc/ldap/
