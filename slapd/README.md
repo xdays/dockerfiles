@@ -19,7 +19,7 @@ image for openldap
     mkdir certs
     cp example.com.crt example.com.key certs
 
-## copy ldif file
+### copy ldif file
 
     docker cp . slapd:/etc/ldap/
 
