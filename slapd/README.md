@@ -14,34 +14,28 @@ image for openldap
 
 ## config
 
-### prepare cert file
-
+    # prepare cert file
     mkdir certs
     cp example.com.crt example.com.key certs
 
-### copy ldif file
-
+    # copy ldif file
     docker cp . slapd:/etc/ldap/
 
-### initial
-
+    # initial
     docker exec slapd ldapmodify -Y EXTERNAL -H ldapi:/// -f /etc/ldap/config/initial.ldif
 
-### config overlay
-
+    # config overlay
     docker exec slapd ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/config/memberof/memberof.ldif
     docker exec slapd ldapmodify -Y EXTERNAL -H ldapi:/// -f /etc/ldap/config/memberof/refint.ldif
     docker exec slapd ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/config/memberof/refint-config.ldif
 
-### add schema
-
+    # add schema
     docker exec slapd ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/config/schema/openssh-lpk.ldif
     docker exec slapd ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/config/schema/sudoers.ldif
 
-### add sample data
-
-    docker exec slapd ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/config/data/ou.ldif
-    docker exec slapd ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/config/data/user.ldif
+    # add sample data
+    ldapadd -H ldaps://dir.example.com/ -D 'cn=admin,dc=example,dc=com' -W -f /etc/ldap/config/data/ou.ldif
+    ldapadd -H ldaps://dir.example.com/ -D 'cn=admin,dc=example,dc=com' -W -f /etc/ldap/config/data/user.ldif
 
 ## restart
 

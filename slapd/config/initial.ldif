@@ -1,12 +1,12 @@
 dn: cn=config
 changetype: modify
 add: olcTLSCertificateFile
-olcTLSCertificateFile: /etc/ldap/certs/xdays.me.crt
+olcTLSCertificateFile: /etc/ldap/certs/example.com.crt
 -
 add: olcTLSCertificateKeyFile
-olcTLSCertificateKeyFile: /etc/ldap/certs/xdays.me.key
+olcTLSCertificateKeyFile: /etc/ldap/certs/example.com.key
 
-dn: olcDatabase={1}mdb,cn=config
+dn: olcDatabase={1}hdb,cn=config
 changetype: modify
 replace: olcSuffix
 olcSuffix: dc=example,dc=com
