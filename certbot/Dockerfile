@@ -1,6 +1,5 @@
-FROM centos
-MAINTAINER xdays <easedays@gmail.com>
+FROM alpine
 
-RUN yum install -y epel-release && yum install -y certbot && yum clean all
+RUN apk add --no-cache certbot
 
 ENTRYPOINT ["certbot"]

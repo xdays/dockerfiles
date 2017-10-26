@@ -8,4 +8,4 @@ Official let's encrypt client
 
 # run
 
-    docker run -it --rm certbot -h
+    docker run -it --rm -v /www/:/data/www -v /etc/letsencrypt:/etc/letsencrypt certbot renew --webroot -w /data/www
