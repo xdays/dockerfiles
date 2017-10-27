@@ -1,0 +1,8 @@
+version: '3'
+services:
+  ssr:
+    image: xdays/ssr
+    ports:
+     - "636:8787"
+    environment:
+      - PASSWORD=${PASSWORD}
