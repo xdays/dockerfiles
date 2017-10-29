@@ -5,6 +5,8 @@ cat > /etc/shadowsocks.json <<EOF
 {
     "server": "${SERVER_ADDR:-0.0.0.0}",
     "server_port": ${SERVER_PORT:-8787},
+    "local_address": "127.0.0.1",
+    "local_port": 8090,
     "password": "${PASSWORD:-changeme}",
     "timeout": ${TIMEOUT:-120},
     "method": "${METHOD:-chacha20}",
