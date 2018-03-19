@@ -1,5 +1,3 @@
-FROM alpine
+FROM certbot/certbot
 
-RUN apk add --no-cache certbot
-
-ENTRYPOINT ["certbot"]
+RUN pip install certbot-dns-cloudflare
