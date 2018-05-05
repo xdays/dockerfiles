@@ -1,4 +1,5 @@
-#说明
-* 详见各目录下的README
+# Dockerfile
+
+For more details please refer readme in sub directory.
 
 Enjoy!

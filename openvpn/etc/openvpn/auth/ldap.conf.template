@@ -1,0 +1,14 @@
+<LDAP> 
+    URL   ldaps://ldap.jumpcloud.com
+    Timeout     15 
+    BindDN      "uid=xiangjunz,ou=Users,o=58cc79a7572cf53b16cb5ba5,dc=jumpcloud,dc=com"
+    Password    $BIND_PASSWORD
+    TLSEnable   no
+    FollowReferrals yes 
+</LDAP> 
+<Authorization> 
+    BaseDN      "ou=Users,o=58cc79a7572cf53b16cb5ba5,dc=jumpcloud,dc=com" 
+    SearchFilter "(uid=%u)" 
+    RequireGroup    false 
+</Authorization> 
+

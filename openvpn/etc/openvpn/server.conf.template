@@ -1,0 +1,22 @@
+port 1194
+proto tcp
+link-mtu 1500
+dev tun
+ca easy-rsa/keys/ca.crt
+cert easy-rsa/keys/BJ.crt
+key easy-rsa/keys/BJ.key
+dh easy-rsa/keys/dh2048.pem
+cipher AES-128-CBC
+auth SHA1
+server $VPN_SUBNET $VPN_NETMASK
+push "dhcp-option DNS $DNS_IP"
+push "redirect-gateway def1"
+keepalive 10 120
+comp-lzo
+persist-key
+persist-tun
+client-to-client
+username-as-common-name
+client-cert-not-required
+
+plugin /usr/lib64/openvpn/plugin/lib/openvpn-auth-ldap.so "/etc/openvpn/auth/ldap.conf  uid=%u "
