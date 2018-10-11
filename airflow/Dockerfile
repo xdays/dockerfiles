@@ -1,5 +1,4 @@
 FROM centos
-MAINTAINER admin@xdays.me
 
 RUN yum install -y gcc gcc-c++ python-devel mariadb-devel && \
     curl x.xdays.me/shells/pip.sh | bash && \
