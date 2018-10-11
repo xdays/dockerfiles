@@ -1,5 +1,10 @@
-FROM        ubuntu:12.04
-MAINTAINER xdays <easedays@gmail.com>
+FROM ubuntu:12.04
 
-ADD script /tmp/script
-RUN bash /tmp/script/setup.sh
+RUN sed -i 's/archive.ubuntu.com/cn.archive.ubuntu.com/' /etc/apt/sources.list &&
+    cat >> /etc/apt/sources.list <<EOF
+    deb http://cn.archive.ubuntu.com/ubuntu/ precise multiverse
+    deb http://cn.archive.ubuntu.com/ubuntu/ precise-updates multiverse
+    EOF
+
+RUN echo Asia/Shanghai > /etc/timezone &&
+    ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
