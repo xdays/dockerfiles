@@ -7,11 +7,9 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
     rm -rf /var/lib/apt/lists/* && \
     git clone https://github.com/microsoft/vscode.git /opt/vscode && \
     cd /opt/vscode/ && \
-    yarn
-
-RUN yarn global add pm2
-
-COPY ecosystem.config.js /opt/vscode/
+    yarn && \
+    yarn run compile
 
 WORKDIR /opt/vscode
-CMD ["pm2", "start", "--no-daemon"]
+
+CMD ["yarn", "web"]
