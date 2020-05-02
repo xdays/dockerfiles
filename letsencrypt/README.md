@@ -8,4 +8,4 @@ auto let's encrypt issuing
 
 # run
 
-    docker run -d --name letsencrypt --net host -v /tmp:/tmp xdays/letsencrypt
+    docker run -d --name letsencrypt -e DOMAINS='xdays.me$' --net host -v /tmp:/tmp xdays/letsencrypt
