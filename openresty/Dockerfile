@@ -14,4 +14,4 @@ RUN apt-get update && apt-get -y install curl software-properties-common && \
 WORKDIR $OPENRESTY_ROOT
 EXPOSE 80 443
 
-CMD ["nginx"]
+CMD ["nginx", "-g", "daemon off;"]
