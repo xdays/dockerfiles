@@ -6,5 +6,6 @@ RUN apk add --no-cache curl && \
     | tar xzf - -C /opt
 
 WORKDIR /opt/subconverter
+RUN sed -i s/enable_cache.*/enable_cache = false/ pref.toml
 CMD ./subconverter
 
