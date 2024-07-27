@@ -1,7 +1,7 @@
-version: '2'
+version: "2"
 services:
   openvpn:
-    image: loopsocial/openvpn
+    image: xdays/openvpn
     privileged: true
     ports:
       - 1194:1194

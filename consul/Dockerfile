@@ -1,6 +1,6 @@
 FROM alpine
 
-ENV VERSION=0.6.4
+ENV VERSION=1.19.1
 ADD https://releases.hashicorp.com/consul/${VERSION}/consul_${VERSION}_linux_amd64.zip \
     https://releases.hashicorp.com/consul/${VERSION}/consul_${VERSION}_web_ui.zip \ /tmp/
 RUN apk update && apk add unzip && \

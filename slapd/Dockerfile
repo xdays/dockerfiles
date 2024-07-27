@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:22.04
 
 ENV PASSOWRD=changeme
 RUN export DEBIAN_FRONTEND=noninteractive && \

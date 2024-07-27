@@ -1,4 +1,4 @@
-FROM hashicorp/vault:1.10.0
+FROM hashicorp/vault:1.17.2
 
 RUN apk add --no-cache curl
 RUN mkdir /vault/plugins && \

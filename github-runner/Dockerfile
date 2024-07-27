@@ -1,6 +1,6 @@
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 
-ARG GITHUB_RUNNER_VERSION="2.263.0"
+ARG GITHUB_RUNNER_VERSION="2.318.0"
 
 ENV RUNNER_NAME "runner"
 ENV GITHUB_PAT ""
@@ -10,7 +10,7 @@ ENV RUNNER_ALLOW_RUNASROOT 1
 
 RUN apt-get update \
     && apt-get install -y \
-        curl sudo git jq \
+    curl sudo git jq \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 

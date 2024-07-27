@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:22.04
 
 # Thanks to https://nbsoftsolutions.com/blog/routing-select-docker-containers-through-wireguard-vpn
 RUN apt-get update -y && \
@@ -11,4 +11,3 @@ RUN apt-get update -y && \
 COPY scripts /scripts
 
 ENTRYPOINT ["/scripts/run.sh"]
-CMD []
